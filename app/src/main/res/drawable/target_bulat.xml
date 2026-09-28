@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- lapisan 1: lingkaran luar -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#22C55E" />
+            <stroke android:width="3dp" android:color="#F0FDF4" />
+        </shape>
+    </item>
+
+    <!-- lapisan 2: cincin tengah putih (masuk 14dp dari tepi) -->
+    <item android:top="14dp" android:bottom="14dp"
+        android:left="14dp" android:right="14dp">
+        <shape android:shape="oval">
+            <solid android:color="#F0FDF4" />
+        </shape>
+    </item>
+
+    <!-- lapisan 3: titik pusat gelap -->
+    <item android:top="28dp" android:bottom="28dp"
+        android:left="28dp" android:right="28dp">
+        <shape android:shape="oval">
+            <solid android:color="#15803D" />
+        </shape>
+    </item>
+</layer-list>

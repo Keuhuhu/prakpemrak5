@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tap the Target</string>
+
+    <!-- HUD (heads-up display): skor dan waktu -->
+    <string name="label_skor">Skor: %1$d</string>
+    <string name="label_waktu">Waktu: %1$d</string>
+
+    <!-- Tombol dan overlay -->
+    <string name="btn_pause">Pause</string>
+    <string name="judul_jeda">Permainan Dijeda</string>
+    <string name="skor_sementara">Skor sementara</string>
+    <string name="btn_lanjutkan">Lanjutkan</string>
+    <string name="btn_ulangi">Ulangi</string>
+    <string name="game_over">Waktu Habis!</string>
+    <string name="skor_akhir">Skor akhir kamu</string>
+    <string name="btn_main_lagi">Main Lagi</string>
+
+    <!-- Deskripsi untuk pembaca layar (aksesibilitas) -->
+    <string name="desc_latar">Latar belakang taman malam</string>
+    <string name="desc_target">Target yang harus ditekan</string>
+
+</resources>

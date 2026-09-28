@@ -1,0 +1,169 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08130C">
+
+    <!-- === LAPISAN 1: LATAR BELAKANG (ketentuan 1) === -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_latar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_game" />
+
+    <!-- === LAPISAN 2: HUD - SKOR & WAKTU (ketentuan 2 & 3) === -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSkor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_skor"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_waktu"
+            android:textColor="#FBBF24"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- === LAPISAN 3: TARGET (ketentuan 4, 5, 6) === -->
+    <ImageView
+        android:id="@+id/imgTarget"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:clickable="true"
+        android:contentDescription="@string/desc_target"
+        android:focusable="true"
+        android:src="@drawable/target_bulat" />
+
+    <!-- === LAPISAN 4: TOMBOL PAUSE (ketentuan 7) === -->
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:minWidth="0dp"
+        android:text="@string/btn_pause" />
+
+    <!-- === LAPISAN 5: OVERLAY JEDA (ketentuan 7) === -->
+    <LinearLayout
+        android:id="@+id/overlayPause"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D908130C"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/judul_jeda"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/skor_sementara"
+            android:textColor="#94A3B8" />
+
+        <TextView
+            android:id="@+id/tvSkorJeda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#3DDC84"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLanjutkan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_lanjutkan" />
+
+        <Button
+            android:id="@+id/btnUlangi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ulangi" />
+    </LinearLayout>
+
+    <!-- === LAPISAN 6: GAME OVER OVERLAY (ketentuan 8 & 9) === -->
+    <LinearLayout
+        android:id="@+id/overlayGameOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E608130C"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/game_over"
+            android:textColor="#FBBF24"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/skor_akhir"
+            android:textColor="#94A3B8" />
+
+        <TextView
+            android:id="@+id/tvSkorAkhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#3DDC84"
+            android:textSize="44sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMainLagi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/btn_main_lagi" />
+    </LinearLayout>
+
+</FrameLayout>
